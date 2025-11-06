@@ -1,7 +1,7 @@
 # ESP32 Quest System Documentation
 
 ## Overview
-A gamified productivity tracker with matrix-style animations, level progression, and quest timers on an OLED display.
+A gamified productivity tracker with level progression, quest system and player analytics on an OLED display.
 
 ---
 
