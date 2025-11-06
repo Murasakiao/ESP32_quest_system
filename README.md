@@ -9,19 +9,20 @@ A gamified productivity tracker with matrix-style animations, level progression,
 - ESP32 microcontroller
 - 128x64 OLED display (SSD1306, I2C address: 0x3C)
 - Push button connected to GPIO pin 4
-- Pull-up resistor for button (or use internal pull-up)
 
 ---
 
-## How It Works
+## FEATURES
 
-### **Three Screens**
-1. **Main Screen** - Matrix rain animation with motivational messages
+### **Screens**
+1. **Main Screen** - Displays notifications or motivational messages
 2. **Status Screen** - Shows player stats (level, XP, quest count)
 3. **Quest Screen** - Start a timed quest
 
-**Navigate**: Short press button to cycle through screens  
-**Start Quest**: Long press (1 second) on Quest Screen
+**Navigate**: 
+1. **Short press** button to cycle through screens 
+2. **Double press** button to cycle through options
+3. **Long press ** button to select
 
 ---
 
