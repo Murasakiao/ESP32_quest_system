@@ -22,7 +22,7 @@ A gamified productivity tracker with matrix-style animations, level progression,
 **Navigate**: 
 1. **Short press** button to cycle through screens 
 2. **Double press** button to cycle through options
-3. **Long press ** button to select
+3. **Long press** button to select
 
 ---
 
