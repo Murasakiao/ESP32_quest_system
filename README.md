@@ -30,15 +30,17 @@ A gamified productivity tracker with matrix-style animations, level progression,
 
 ### **1. Player Progression**
 - Start at Level 1 with 0 XP
-- Complete quests to gain XP (10-15 + level bonus)
+- Complete quests to gain XP 
 - Level up when XP reaches threshold
 - XP requirement increases by 1.5x each level
 - Progress saved to persistent storage
 
 ### **2. Quest System**
-- Duration: 2 minutes (120 seconds)
+- Category: Study Quest, Exercise Quest, Meditation Quest, Creative Quest
+- Duration: Short, Medium, Long Epic
 - Shows countdown timer with progress bar
-- Press button during quest to cancel
+- Short press button during quest to pause
+- Long press button during quest to cancel
 - Completion: Animated cube → claim reward → gain XP
 - Tracks total quests completed
 
@@ -108,34 +110,6 @@ SETUP & LOOP              - Initialization and main loop
 
 ---
 
-## Customization
-
-### **Change Quest Duration**
-```cpp
-unsigned long questDuration = 120000; // milliseconds (120s = 2min)
-```
-
-### **Adjust XP Rewards**
-```cpp
-xpReward = random(10, 15) + (level * 1.5); // Min, Max, Level bonus
-```
-
-### **Modify Messages**
-```cpp
-const char* messages[] = {
-  "  - STAY FOCUSED -  ",
-  "  - YOU GOT THIS! -  ",
-  // Add your messages here
-};
-```
-
-### **Change Player Name**
-```cpp
-display.print("PLAYER: JULIUS"); // Edit here
-```
-
----
-
 ## Storage Keys
 Data saved to ESP32 flash memory:
 - `level` - Current player level
@@ -143,36 +117,6 @@ Data saved to ESP32 flash memory:
 - `xpToNext` - XP needed for next level
 - `screen` - Last active screen
 - `totalQuests` - Total quests completed
-
----
-
-## Troubleshooting
-
-**Display not working?**
-- Check I2C address (default: 0x3C)
-- Verify wiring: SDA and SCL connections
-- Check power supply
-
-**Button not responding?**
-- Verify GPIO 4 connection
-- Check pull-up resistor
-- Try adjusting `debounceDelay` value
-
-**Progress not saving?**
-- Ensure stable power supply
-- Check Serial Monitor for errors
-- Verify flash memory is not full
-
----
-
-## Serial Monitor Output
-Monitor quest completion and XP gains:
-```
-Quest complete!
-Gained 12 XP
-```
-
-Set baud rate to **115200** in Serial Monitor.
 
 ---
 
